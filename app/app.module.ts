@@ -7,6 +7,9 @@ import { AboutPage } from './pages/about/about';
 import { HomePage } from './pages/home/home';
 import { TabsPage } from './pages/tabs/tabs';
 
+// services
+import { DeseosService } from './services/deseos.service';
+
 @NgModule({
   declarations: [
     MyApp,
@@ -26,7 +29,7 @@ import { TabsPage } from './pages/tabs/tabs';
     TabsPage
   ],
   providers: [
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler, d : DeseosService}
   ]
 })
 export class AppModule {}
