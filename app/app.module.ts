@@ -29,7 +29,8 @@ import { DeseosService } from './services/deseos.service';
     TabsPage
   ],
   providers: [
-    {provide: ErrorHandler, useClass: IonicErrorHandler, d : DeseosService}
+    DeseosService,
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}
